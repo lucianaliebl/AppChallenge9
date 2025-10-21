@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		57A6B7752EA80B8B00C45EAB /* Challenge9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge9.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A6B7752EA80B8B00C45EAB /* Banzar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banzar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		57A6B7772EA80B8B00C45EAB /* Challenge9 */ = {
+		57A6B7772EA80B8B00C45EAB /* Banzar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Challenge9;
+			path = Banzar;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		57A6B76C2EA80B8B00C45EAB = {
 			isa = PBXGroup;
 			children = (
-				57A6B7772EA80B8B00C45EAB /* Challenge9 */,
+				57A6B7772EA80B8B00C45EAB /* Banzar */,
 				57A6B7762EA80B8B00C45EAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		57A6B7762EA80B8B00C45EAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57A6B7752EA80B8B00C45EAB /* Challenge9.app */,
+				57A6B7752EA80B8B00C45EAB /* Banzar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57A6B7742EA80B8B00C45EAB /* Challenge9 */ = {
+		57A6B7742EA80B8B00C45EAB /* Banzar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57A6B7802EA80B8C00C45EAB /* Build configuration list for PBXNativeTarget "Challenge9" */;
+			buildConfigurationList = 57A6B7802EA80B8C00C45EAB /* Build configuration list for PBXNativeTarget "Banzar" */;
 			buildPhases = (
 				57A6B7712EA80B8B00C45EAB /* Sources */,
 				57A6B7722EA80B8B00C45EAB /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				57A6B7772EA80B8B00C45EAB /* Challenge9 */,
+				57A6B7772EA80B8B00C45EAB /* Banzar */,
 			);
-			name = Challenge9;
+			name = Banzar;
 			packageProductDependencies = (
 			);
 			productName = Challenge9;
-			productReference = 57A6B7752EA80B8B00C45EAB /* Challenge9.app */;
+			productReference = 57A6B7752EA80B8B00C45EAB /* Banzar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57A6B7702EA80B8B00C45EAB /* Build configuration list for PBXProject "Challenge9" */;
+			buildConfigurationList = 57A6B7702EA80B8B00C45EAB /* Build configuration list for PBXProject "Banzar" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57A6B7742EA80B8B00C45EAB /* Challenge9 */,
+				57A6B7742EA80B8B00C45EAB /* Banzar */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57A6B7702EA80B8B00C45EAB /* Build configuration list for PBXProject "Challenge9" */ = {
+		57A6B7702EA80B8B00C45EAB /* Build configuration list for PBXProject "Banzar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57A6B77E2EA80B8C00C45EAB /* Debug */,
@@ -320,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57A6B7802EA80B8C00C45EAB /* Build configuration list for PBXNativeTarget "Challenge9" */ = {
+		57A6B7802EA80B8C00C45EAB /* Build configuration list for PBXNativeTarget "Banzar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57A6B7812EA80B8C00C45EAB /* Debug */,
