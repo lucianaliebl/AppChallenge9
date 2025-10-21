@@ -90,7 +90,7 @@ class AppModel{
                     self.outputText = response.content  //.content: Esta é uma propriedade (variável) dentro do objeto response. O valor dessa propriedade é o texto puro gerado pelo Large Language Model (LLM). É a string final que você quer exibir para o usuário.
                     self.isLoading = false
                 }
-            } catch{
+            } catch {
                 //Bloco de código que é executado apenas se o bloco do falhar (ex: erro de indisponibilidade do modelo)
                 await MainActor.run{
                     self.outputText = "Erro ao gerar resposta: \(error.localizedDescription)" //Acessa a descrição do erro de forma amigável ao usuário.
