@@ -10,22 +10,26 @@ import Foundation
 
 struct BanzarIntent: AppIntent {
     static var title: LocalizedStringResource = "Its Banzos Time"
-    static var description: IntentDescription = "Tell me if is banzos time and notifies everyone"
+    static var description: IntentDescription = "Tell me if is banzos tiXme and notifies everyone"
+    
+    private var notificationManager = NotificationManager()
     
     @MainActor
-    func perform() async throws -> some IntentResult {
+    func perform() async throws -> some ProvidesDialog {
         let dataAtual = Date()
 
         let hora = "\(Calendar.current.component(.hour, from: dataAtual))\(Calendar.current.component(.minute, from: dataAtual))"
 
         let intervalo = ["inicio": "1550", "fim": "1630"]
+        
+        var dialogo: IntentDialog
 
         if hora >= intervalo["inicio"]! && hora <= intervalo["fim"]! {
-            print("Entrou no intervalo")
+            notificationManager.EnviarNotificação()
+            dialogo = "Hora de Banzar! Mandando notificação para todo mundo!"
+        } else {
+            dialogo = "Ainda não é hora de Banzar!"
         }
-        else{
-            print("NÃO É HORA DE BANZAR!")
-        }
-        return .result()
+        return .result(dialog: dialogo)
     }
 }
