@@ -33,6 +33,8 @@ class NotificationManager {
         let record = CKRecord(recordType: "Aviso")
         record["Banzos"] = "Hora de Banzar"
         
+        print("Notificação enviada")
+        
         CKContainer.default().publicCloudDatabase.save(record) {  _, error in
             if let error = error {
                         print("Erro ao salvar record: \(error)")

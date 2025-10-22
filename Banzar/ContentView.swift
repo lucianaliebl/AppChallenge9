@@ -40,13 +40,24 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity)
             }
             .frame(maxWidth: 250)
-            .padding()
-            .background(appModel.isLoading ? Color.gray : Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .shadow(radius: 5)
-            .buttonStyle(.borderedProminent)
-            .disabled(appModel.isLoading) //Desabilita o botão (o usuário não pode clicar) se appModel.isLoading for true. Isso evita cliques múltiplos enquanto a IA está processando.
+                        .padding()
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                      //  .buttonStyle(.borderedProminent)
+                        .background(appModel.isLoading ? Color.gray : Color.red)
+                        .cornerRadius(20)
+                        .disabled(appModel.isLoading) //Desabilita o botão (o usuário não pode clicar) se appModel.isLoading for true. Isso evita cliques múltiplos enquanto a IA está processando.
+            
+// MARK: - Botão temporário
+            // Este botão serve apenas para testar as notificações enquanto a Siri não está presente no arquivo.
+            Button{
+                notificationManager.EnviarNotificação()
+            } label: {
+                Text("Enviar uma notificação")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+            }
             
             if appModel.isLoading{
                 ProgressView()//Elemento de UI. Exibe o indicador de carregamento (a roda giratória).
