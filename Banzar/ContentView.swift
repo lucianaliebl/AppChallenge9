@@ -16,11 +16,10 @@ struct ContentView: View {
     
     var body: some View{
         VStack(spacing: 20){
-            Text("Sugestões de lanches Banzos")
-                
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.blue)
+                    Text("Sugestões de lanches Banzos")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.red)
             
             //Exibe o resultado do modelo
             TextEditor(text: .constant(appModel.outputText))
