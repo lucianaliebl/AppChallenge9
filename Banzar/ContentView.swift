@@ -31,7 +31,14 @@ struct ContentView: View {
                 .shadow(color: Color.gray.opacity(0.4), radius: 3, x: 0, y: 2)
                 .border(Color.secondary.opacity(0.5), width: 1)
                 .padding()
-            
+            Button {
+                Task {
+                    notificationManager.EnviarNotificação()
+                }
+            } label: {
+                Text("Notificacao")
+
+            }
             //Botão que chama a função de IA
             Button {
                 appModel.generateSuggestion()
