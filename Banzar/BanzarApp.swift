@@ -1,9 +1,5 @@
-//
 //  Challenge9App.swift
-//  Challenge9
-//
-//  Created by Luciana Liebl de Freitas on 21/10/25.
-//
+//  Challenge09_Group8
 
 import SwiftUI
 

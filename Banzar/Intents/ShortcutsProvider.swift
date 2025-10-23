@@ -1,12 +1,10 @@
-//
 //  ShortcutsProvider.swift
 //  Challenge09_Group8
-//
-//  Created by Marcos Albuquerque on 21/10/25.
-//
 
 import AppIntents
 
+// Define um provedor de Atalhos da Siri
+// É assim que o app "ensina" a Siri quais frases podem ativar suas Ações (Intents).
 struct BanzouShortcutsProvider: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] = [
         AppShortcut(

@@ -1,13 +1,10 @@
-//
 //  Banzarintent.swift
 //  Challenge09_Group8
-//
-//  Created by Marcos Albuquerque on 21/10/25.
-//
 
 import AppIntents
 import Foundation
 
+// Define a "Ação" principal que a Siri e o app Atalhos podem executar.
 struct BanzarIntent: AppIntent {
     static var title: LocalizedStringResource = "Its Banzos Time"
     static var description: IntentDescription = "Tell me if is banzos tiXme and notifies everyone"
@@ -26,9 +23,9 @@ struct BanzarIntent: AppIntent {
 
         if hora >= intervalo["inicio"]! && hora <= intervalo["fim"]! {
             notificationManager.EnviarNotificação()
-            dialogo = "Hora de Banzar! Mandando notificação para todo mundo!"
+            dialogo = "Hora de Banzar! Mandando lembrete para todo mundo!"
         } else {
-            dialogo = "Ainda não é hora de Banzar!"
+            dialogo = "Não é hora de Banzar! Vá trabalhar!"
         }
         return .result(dialog: dialogo)
     }

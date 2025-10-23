@@ -1,9 +1,5 @@
-//
-//  Untitled.swift
-//  Challenge9
-//
-//  Created by Luciana Liebl de Freitas on 21/10/25.
-//
+//  AppModel.swift
+//  Challenge09_Group8
 
 import Foundation
 import FoundationModels
@@ -14,7 +10,6 @@ let menu: [String: [String]] = [
     //Chave
     "Comidas":[
         "Pastel", //Item 1 do array
-        "Coxinha", //item 2 do array
         "Pão de queijo",
         "Enroladinho de salsicha",
         "Bolinha de queijo",
@@ -22,17 +17,62 @@ let menu: [String: [String]] = [
         "Esfirra de frango",
         "Quibe",
         "Bolo de chocolate",
-        "Sanduíche natural"
+        "Sanduíche natural",
+        "Batata Frita",
+        "Batata Rústica",
+        "Batata Especial Completa",
+        "Burguer Banzos Chicken",
+        "Burguer Banzos Cheese",
+        "Burguer Banzos Bacon",
+        "Burguer Banzos Cheese Egg",
+        "Burguer Banzos Bruto",
+        "Burguer Banzos Double",
+        "Burguer X-Salada",
+        "Burguer X-Bacon",
+        "Burguer X-Egg",
+        "Burguer X-Tudo",
+        "Hot Dog na Chapa",
+        "Hot Dog na Chapa de Frango",
+        "Nuggets Crocantes",
+        "Strogonoff de Frango",
+        "Macarrão",
+        "Omelete Simples",
+        "Omelete Frango",
+        "Omelete Presunto",
+        "Tapioca com Margarina",
+        "Tapioca com Mussarela",
+        "Tapioca com Ovos",
+        "Tapioca c/ Mussarela e Ovo",
+        "Tapioca c/ Mussarela e Presunto",
+        "Tapioca c/ Mussarela e Frango Desfiado",
+        "Pão de Sal na Chapa com Ovo",
+        "Pão de Sal na Chapa com Queijo Mussarela",
+        "Pão de Sal na Chapa com Queijo, Mussarela e Presunto",
+        "Pão de Sal na Chapa com Queijo Mussarela, Presunto e Ovo",
+        "Pão de Sal na Chapa com Queijo Mussarela, Tomate e Orégano",
+        "Pão de Sal na Chapa com Ovo, Calabresa, Queijo Mussarela e Presunto",
+        "Crepe",
+        "Coxinha de frango com catupiry",
+        "Coxinha de frango com cheddar",
+        "Coxinha de frango com bacon",
+        "Croissant de chocolate",
+        "Salgado de presunto e queijo",
+        "Pão pizza",
+        "Barrinha de Cereal",
+        "Bolo no Pote"
     ],
+    
     //Chave
     "Bebidas":[
-        "Refrigerante", //Item 1 do array
-        "Suco de laranja", //item 2 do array
+        "Refrigerante",
+        "Suco de laranja",
         "Suco de uva",
         "Café",
         "Café com leite",
-        "Toddynho",
-        "Chá"
+        "Achocolatado",
+        "Chá",
+        "Energético",
+        "Suco de pêssego"
     ]
 ]
 
@@ -40,7 +80,7 @@ let menu: [String: [String]] = [
 @Observable
 class AppModel{
     
-    var outputText: String = "Pressione o botão para receber uma sugestão de lanche para hoje" //declara uma variavel para armazenar o texto de saída do modelo.
+    var outputText: String = "Pressione o botão para receber uma sugestão de lanche para a hora de Banzar!" //declara uma variavel para armazenar o texto de saída do modelo.
     var isLoading: Bool = false //variável de estado para controlar se a IA está processando. Usada para desabilitar o botão e mostrar um ProgressView.
     
     //O model e a sessão são inicializados ao criar o AppModel
@@ -48,12 +88,12 @@ class AppModel{
     
     private let session = LanguageModelSession() //Cria uma sessão de comunicação com o modelo de linguagem. Uma Session é o objeto principal que você usa para enviar prompts e receber respostas.
     
-    //Funçào assíncrona para chamar o modelo. Função chamada quando o user clica no botão
+    //Função assíncrona para chamar o modelo. Função chamada quando o user clica no botão
     func generateSuggestion(){
         //Inicia um bloco de código assíncrono, porque a chamada da IA (session.respond) leva tempo e usa await
         Task{
             //Atualiza o estado na thread principal
-            await MainActor.run{//Envia o código para ser executado na thread principal (Main Thread).
+            await MainActor.run{ //Envia o código para ser executado na thread principal (Main Thread).
                 self.isLoading = true
                 self.outputText = "Gerando sugestão de lanche..."
             }
